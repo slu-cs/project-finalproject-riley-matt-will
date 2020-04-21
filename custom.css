@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+.custHead{
+    background-color: rgb(1, 51, 105);
+}
+#headText{
+  /* font-family: 'Frijole', cursive; */
+  font-family: 'Audiowide', cursive;
+  font-size: 28px;
+}
