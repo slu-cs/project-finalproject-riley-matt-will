@@ -15,8 +15,8 @@ const teams = [
     id: 'testTeam',
     teamName: 'Test Team',
     teamScore: 0
-  });
-]
+  })
+];
 
 // Reset the database
 mongoose.connection.dropDatabase()
