@@ -8,3 +8,6 @@
   font-family: 'Audiowide', cursive;
   font-size: 28px;
 }
+.whiteSVG{
+  filter: invert(100%);
+}

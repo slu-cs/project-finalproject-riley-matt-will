@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Homepage</title>
+    <title>Team Management</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="Stylesheet" href="custom.css"
   </head>
@@ -41,6 +41,20 @@
               crossorigin="anonymous">
             </script>
             <script>
+            // Intercept form submits
+            $('button').on('click', function(event) {
+              event.preventDefault();
 
+              // Construct a request object
+              const request = {
+                method: 'PUT',
+                url: '/teams/',
+                data: $('#body').val()
+              };
+
+              // Send the request and display the response on the page
+              $.ajax(request)
+                .done(response => $('textarea').val(JSON.stringify(response)))
+                .fail(error => $('textarea').val(JSON.stringify(error)));
             </script>
 </html>
