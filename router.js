@@ -26,7 +26,7 @@ router.get('/teams', function(request, response){
 });
 
 router.get('/teams/scores', function(request, response){
-  response.render('leagueScores');
+  Team.find().then(teams => response.render('leagueScores', {teams: teams}));
 });
 
 // Handle course requests
