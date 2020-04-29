@@ -17,6 +17,18 @@ router.get('/', function(request, response){
   response.render('index');
 });
 
+router.get('/teams/new', function(request, response){
+  response.render('newTeam');
+});
+
+router.get('/teams', function(request, response){
+  response.render('viewTeam');
+});
+
+router.get('/teams/scores', function(request, response){
+  response.render('leagueScores');
+});
+
 // Handle course requests
 // router.get('/stats', stats.index);
 // router.get('/stats/:id', stats.retrieve);
