@@ -13,6 +13,10 @@ const authorize = function(request, response, next) {
   }
 };
 
+router.get('/', function(request, response){
+  response.render('index');
+});
+
 // Handle course requests
 // router.get('/stats', stats.index);
 // router.get('/stats/:id', stats.retrieve);
